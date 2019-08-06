@@ -3,11 +3,11 @@ const path = require('path');
 const get4painting = require('../src/queries/getData');
 const exphbas = require("express-handlebars");
 const app = express();
-// app.use(router)
 
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
-
+app.use(express.json());
+app.use(express.urlencoded());
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
