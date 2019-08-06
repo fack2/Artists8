@@ -1,14 +1,13 @@
 <input type="search">
-<h2>the most expensive 4 paintings</h2>
+<h2>The four most expensive paintings</h2>
 <div>
-
     {{#each paintings}}
     <a href="/painting/:{{id}}">
-        <div>
+        <article>
             <img src="{{img}}" alt="{{name}}">
             <h2> {{name}}</h2>
             <h2>{{price}}</h2>
-        </div>
+        </article>
     </a>
     {{/each}}
 </div>
