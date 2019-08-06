@@ -1,0 +1,15 @@
+<input type="search">
+<h2>the most expensive 4 paintings</h2>
+<div>
+
+    {{#each paintings}}
+    <a href="/painting/:{{id}}">
+        <div>
+            <img src="{{img}}" alt="{{name}}">
+            <h2> {{name}}</h2>
+            <h2>{{price}}</h2>
+        </div>
+    </a>
+    {{/each}}
+</div>
+<input type="button" value="Add Painting">

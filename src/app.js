@@ -1,8 +1,9 @@
 const express = require("express");
 const path = require('path');
+const get4painting = require('../src/queries/getData');
 const exphbas = require("express-handlebars");
 const app = express();
-app.use(router)
+// app.use(router)
 
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
@@ -16,11 +17,20 @@ app.engine(
     extname: "hbs",
     layoutsDir: path.join(__dirname, "views", "layouts"),
     defaultLayout: "main",
-    partialsDir: path.join(__dirname, "views", "partials")
+    // partialsDir: path.join(__dirname, "views", "partials")
   })
 );
 
 
-
+app.get("/", (req, res,next) => {
+  get4painting((err,data)=>{
+    if(err)
+      next(err);
+      console.log(data,"00000000")
+    res.render("home", {
+      paintings: data
+    });
+  });
+});
 
 module.exports = app
