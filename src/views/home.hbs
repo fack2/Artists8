@@ -3,11 +3,11 @@
 <h2>The four most expensive paintings</h2>
 <div>
     {{#each paintings}}
-    <a href="/painting/:{{id}}">
+    <a href="/painting/{{id}}">
         <article class="card">
-            <img src="{{img}}" alt="{{name}}">
+            <img src="{{img}}" alt="{{paintingname}}">
             <div class="content">
-                <h2> {{name}}</h2>
+                <h2> {{paintingname}}</h2>
                 <h2>{{price}}</h2>
             </div>
         </article>

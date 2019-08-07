@@ -1,4 +1,4 @@
-# Hebron Rest:
+# Artists8:
 
 ## Description:
 
@@ -32,9 +32,9 @@ allows you to add a painting if you want.
   - db_build.js
   - db_build.sql
   - db_connection.js
-    - queries:
-    - getData.js
-    - postData.js
+- queries:
+ - getData.js
+ - postData.js
 - app.js
 - server.js
 
