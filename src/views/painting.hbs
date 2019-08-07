@@ -1,0 +1,28 @@
+<header>
+  {{#each fourPaintingsDetails}}
+  <h1>{{paintingName}}</h1>
+  {{/each}}
+</header>
+
+  {{#each fourPaintingsDetails}}
+  <img src ="{{img}}">
+  <ul>
+    <li> {{price}} </li>
+    <li> {{name}} </li>
+    <li> {{country}} </li>
+    <li> {{{{description}}}} </li>
+  </ul>
+  {{/each}}
+
+
+{{#each otherPaintingDetails}}
+ <img src ="{{img}}">
+  <ul>
+    {{#if price '>' 0}}
+    <li> {{price}} </li>
+    {{/if}}
+    <li> {{name}} </li>
+    <li> {{country}} </li>
+    <li> {{{{description}}}} </li>
+  </ul>
+{{/each}}
