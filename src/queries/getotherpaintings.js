@@ -1,6 +1,6 @@
 const dbConnection = require('../database/db_connection')
 
-const getPainting2 = id => {
+const getOtherPaintings = id => {
   return (dbConnection
     .query(
       `Select * from paintings where id_artist = (select id_artist from paintings where id=$1) and id!=$1 limit 2`,
@@ -10,4 +10,4 @@ const getPainting2 = id => {
     .catch(err => err))
 }
 
-module.exports = getPainting2
+module.exports = getOtherPaintings
