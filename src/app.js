@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const router = require("./controllers");
-const exphbas = require("express-handlebars");
+const exphbs = require("express-handlebars");
 const app = express();
 
 app.use(express.static(path.join(__dirname, "..", "public")));
@@ -12,7 +12,7 @@ app.set("view engine", "hbs");
 
 app.engine(
   "hbs",
-  exphbas({
+  exphbs({
     extname: "hbs",
     layoutsDir: path.join(__dirname, "views", "layouts"),
     defaultLayout: "main",
