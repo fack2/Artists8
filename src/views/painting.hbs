@@ -1,0 +1,15 @@
+<header>
+  {{#each fourPaintingsDetails}}
+  <h1>{{paintingname}}</h1>
+  {{/each}}
+</header>
+
+  {{#each fourPaintingsDetails}}
+  <img src ="{{img}}">
+  <ul>
+    <li> {{price}} </li>
+    <li> {{name}} </li>
+    <li> {{country}} </li>
+    <li> {{description}} </li>
+  </ul>
+  {{/each}}

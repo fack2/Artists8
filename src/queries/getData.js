@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 const dbConnection = require("../database/db_connection.js");
 const get4ExpensivePainting = dbConnection
   .query(
@@ -9,4 +7,3 @@ const get4ExpensivePainting = dbConnection
   .catch(e => e);
 
 module.exports = get4ExpensivePainting;
->>>>>>> Stashed changes
