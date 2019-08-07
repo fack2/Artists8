@@ -1,20 +1,20 @@
 {{>header}}
 <form action="/painting-form" method="POST">
 
-    <label for="artistID">Artisi Name</label>
+    <label for="artistID">Artist</label>
     <select name=artistID id="artistID">
         {{#each artists}}
         <option value="{{id}}">{{name}}</option>
         {{/each}}
     </select>
     <br>
-    <label for="paintName">Paint Name</label>
+    <label for="paintName">Painting</label>
     <input type="text" name="paintName" id="paintName">
     <br>
     <label for="price">Price</label>
     <input type="text" name="price" id="price">
     <br>
-    <label for="img">Img </label>
+    <label for="img">Img</label>
     <input type="text" name="img" id="img">
     <br>
     <label for="description">Description</label>
