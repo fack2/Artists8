@@ -1,17 +1,18 @@
+{{>header}}
 <input type="search" placeholder="Enter the painting name ...">
-<img src="assest/search.png">
+<img class="searchImg" src="assets/search.png">
 <h2>The four most expensive paintings</h2>
 <div>
     {{#each paintings}}
-    <a href="/painting/{{id}}">
+    <a href="/painting/:{{id}}">
         <article class="card">
-            <img src="{{img}}" alt="{{paintingname}}">
+            <img src="{{img}}" alt="{{paintingname }}">
             <div class="content">
-                <h2> {{paintingname}}</h2>
+                <h2> {{paintingname }}</h2>
                 <h2>{{price}}</h2>
             </div>
         </article>
     </a>
     {{/each}}
 </div>
-<input type="button" value="Add Painting">
+<a href="/painting-form"><button>Add Painting</button></a>
