@@ -9,16 +9,16 @@ CREATE TABLE artists (
     coutry VARCHAR(40)
 );
 
-INSERT INTO artists (id, name, coutry) VALUES
-('1', 'Leonardo da Vinci', 'Italy'), 
-('2', 'Willem de Kooning', 'Netherlands'), 
-('3', 'Paul Cézanne', 'France'), 
-('4', 'Paul Gauguin', 'France'), 
-('5', 'johannes vermeer', 'Span'), 
-('6', 'rembrandt', 'Netherlands'), 
-('7', 'picasso', 'Netherlands'), 
-('8', 'Edvard Munch', 'Norway'), 
-('9', 'van gogh ', 'Netherlands')
+INSERT INTO artists (name, country) VALUES
+( 'Leonardo da Vinci', 'Italy'), 
+( 'Willem de Kooning', 'Netherlands'), 
+( 'Paul Cézanne', 'France'), 
+( 'Paul Gauguin', 'France'), 
+( 'johannes vermeer', 'Span'), 
+( 'rembrandt', 'Netherlands'), 
+( 'picasso', 'Netherlands'), 
+( 'Edvard Munch', 'Norway'), 
+( 'van gogh ', 'Netherlands')
 ;
 
 CREATE TABLE paintings (

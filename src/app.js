@@ -1,11 +1,10 @@
 const express = require("express");
-const path = require('path');
-const router = require('./controllers/index');
+const path = require("path");
+const router = require("./controllers");
 const exphbas = require("express-handlebars");
 const app = express();
 
-
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, "..", "public")));
 app.use(express.json());
 app.use(express.urlencoded());
 app.set("views", path.join(__dirname, "views"));
@@ -23,4 +22,4 @@ app.engine(
 
 app.use(router);
 
-module.exports = app
+module.exports = app;
