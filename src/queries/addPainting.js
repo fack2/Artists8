@@ -1,4 +1,5 @@
 const dbConnection = require('../database/db_connection.js')
+
 const text = `INSERT INTO paintings (paintingname, price, description, img, id_artist) VALUES($1,$2,$3,$4, $5);`
 
 const addPainting = paintarray =>
@@ -6,4 +7,5 @@ const addPainting = paintarray =>
     .query(text, paintarray)
     .then(res => {})
     .catch(e => console.error(e.stack))
+
 module.exports = addPainting

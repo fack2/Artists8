@@ -1,6 +1,6 @@
 const get4ExpensivePainting = require('../../src/queries/getData')
-exports.get = ('/',
-(req, res) => {
+
+exports.get = (req, res) => {
   get4ExpensivePainting
     .then(data => {
       res.render('home', {
@@ -10,4 +10,4 @@ exports.get = ('/',
     .catch(err => {
       console.log(err)
     })
-})
+}
