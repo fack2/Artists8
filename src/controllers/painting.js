@@ -1,22 +1,9 @@
-const get4paintings = require("../queries/get4paintings");
-const getotherpaintings = require("../queries/get4paintings");
+const getPaintingQuery = require('../queries/get4paintings')
 
 exports.get = (req, res) => {
-  get4paintings(1, (err, result) => {
-    if (err) {console.log("error", err);
-     }
-    console.log("result" ,result);
+  getPaintingQuery(req.params.id).then((result) => {
+    res.render('painting', { fourPaintingsDetails: result })
   })
-  // res.render("painting", { fourPaintingsDetails: result } );
+    .catch(err => console.log(err)
+    )
 }
-
-
-exports.get = (req, res) => {
-  getotherpaintings(1, (err, result) => {
-    if (err) {
-      console.log("error", err);
-    }
-      console.log("result" ,result);
-  })
-    // res.render("painting", { otherPaintingDetails: result } );
- }

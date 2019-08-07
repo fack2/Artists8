@@ -1,0 +1,8 @@
+ id |     paintingname     |   price   |                             img                              
+----+----------------------+-----------+--------------------------------------------------------------
+  1 | Savior of the World  | 453000000 | https://files.gitter.im/95Rawan/cCkJ/salvator-mundi.jpg
+  2 | Interchange          | 312000000 | https://files.gitter.im/95Rawan/cCkJ/Interchange.jpeg
+  3 | The Card Players     | 274000000 | https://files.gitter.im/95Rawan/cCkJ/the-card-players.jpg
+  4 | When Will You Marry? | 219000000 | https://files.gitter.im/95Rawan/cCkJ/when-will-you-marry.jpg
+(4 rows)
+
