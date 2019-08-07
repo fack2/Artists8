@@ -25,8 +25,8 @@ CREATE TABLE paintings (
     id SERIAL PRIMARY KEY,
     paintingName VARCHAR(150) NOT NULL,
     price double precision NOT NULL,
-    description text ,
     img text,
+    description text ,
     id_artist INTEGER,
     FOREIGN KEY
     (id_artist) REFERENCES artists (id)

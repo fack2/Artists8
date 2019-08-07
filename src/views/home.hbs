@@ -1,0 +1,17 @@
+<input type="search" placeholder="Enter the painting name ...">
+<img src="assest/search.png">
+<h2>The four most expensive paintings</h2>
+<div>
+    {{#each paintings}}
+    <a href="/painting/:{{id}}">
+        <article class="card">
+            <img src="{{img}}" alt="{{name}}">
+            <div class="content">
+                <h2> {{name}}</h2>
+                <h2>{{price}}</h2>
+            </div>
+        </article>
+    </a>
+    {{/each}}
+</div>
+<input type="button" value="Add Painting">

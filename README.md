@@ -50,3 +50,6 @@ allows you to add a painting if you want.
 ## Team:
 
 - [Rawan](https://github.com/95rawan)
+- [Yousef](https://github.com/YousefQwasmeh)
+- [Saja](https://github.com/SajaLahaleeh)
+- [Someya](https://github.com/someyaaltous)
