@@ -4,9 +4,9 @@ DROP TABLE IF EXISTS paintings CASCADE;
 DROP TABLE IF EXISTS artists CASCADE;
 
 CREATE TABLE artists (
-    id SERIAL PRIMARY KEY, 
+    id SERIAL PRIMARY KEY , 
     name VARCHAR(150) NOT NULL, 
-    coutry VARCHAR(40)
+    country VARCHAR(40)
 );
 
 INSERT INTO artists (name, country) VALUES
