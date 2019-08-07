@@ -14,8 +14,10 @@ router.use(express.urlencoded())
 
 const painting = require('./painting')
 
-router.get('/painting/:id', painting.get)
+const search = require('./search')
 
+router.get('/painting/:id', painting.get)
+router.get('/search/:search', search.get)
 router.get('/', home.get)
 router.get('/painting-form', GETpainting.get)
 

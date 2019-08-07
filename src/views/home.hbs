@@ -1,10 +1,16 @@
 {{>header}}
-<input type="search" placeholder="Enter the painting name ...">
-<img class="searchImg" src="assest/search.png">
+<input type="search" id="searchInput" placeholder="Enter the painting name ...">
+<a id="aImg">
+    <img class="searchImg" id="searchImg" src="/assest/search.png">
+</a>
+{{#if search}}
+<h2>The result for your search</h2>
+{{else}}
 <h2>The four most expensive paintings</h2>
+{{/if}}
 <div>
     {{#each paintings}}
-    <a href="/painting/:{{id}}">
+    <a href="/painting/{{id}}">
         <article class="card">
             <img src="{{img}}" alt="{{paintingname }}">
             <div class="content">
@@ -16,3 +22,9 @@
     {{/each}}
 </div>
 <a href="/painting-form"><button>Add Painting</button></a>
+<script>
+    document.getElementById("searchImg").addEventListener("click", e => {
+        const search = document.getElementById("searchInput").value;
+        document.getElementById("aImg").href = `/search/${search}`
+    })
+</script>
