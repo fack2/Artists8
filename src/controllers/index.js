@@ -7,7 +7,7 @@ const painting = require('./painting')
 const paintingForm = require('./paintingForm')
 
 router.get('/', home.get)
-router.get('/painting/:id', painting.get)
+router.get('/painting/:id', painting.promiseAll)
 router.get('/painting-form', paintingForm.get)
 router.post('/painting-form', paintingForm.post)
 

@@ -1,10 +1,10 @@
 <header>
-  {{#each fourPaintingsDetails}}
+  {{#each painting}}
   <h1>{{paintingname}}</h1>
   {{/each}}
 </header>
 
-  {{#each fourPaintingsDetails}}
+  {{#each painting}}
   <img src ="{{img}}">
   <ul>
     <li> {{price}} </li>
@@ -13,7 +13,7 @@
     <li> {{description}} </li>
   </ul>
   {{/each}}
-  {{#each morePaintings}}
+  {{#each allPaintings}}
     <a href="/painting/{{id}}">
         <article class="card">
             <img src="{{img}}" alt="{{paintingname}}">

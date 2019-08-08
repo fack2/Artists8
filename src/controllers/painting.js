@@ -1,14 +1,8 @@
 const getPaintings = require('../queries/get4paintings')
 const getOtherPaintings = require('../queries/getotherpaintings')
 
-exports.get = (req, res) => {
-  getPaintings(req.params.id)
-    .then(result => {
-      getOtherPaintings(req.params.id)
-        .then(result2 => {
-          res.render('painting', { fourPaintingsDetails: result,
-            morePaintings: result2 })
-        })
-    })
+exports.promiseAll = (req, res) => {
+  Promise.all([getPaintings(req.params.id), getOtherPaintings(req.params.id)])
+    .then(result => res.render('painting', { painting: result[0], allPaintings: result[1] }))
     .catch(err => console.log(err))
 }
