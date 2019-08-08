@@ -1,13 +1,17 @@
 <link rel="stylesheet" href="/style.css">
 {{>header}}
-<input class="inputH" type="search" placeholder="Enter the painting name ...">
-<img class="searchImg" src="assets/search.png">
-
-
+<input type="search" class="inputH" id="searchInput" placeholder="Enter the painting name ...">
+<a id="aImg">
+    <img class="searchImg" id="searchImg" src="/assets/search.png">
+</a>
+{{#if search}}
+<h2>The result for your search</h2>
+{{else}}
 <h2>The four most expensive paintings</h2>
+{{/if}}
 <div>
     {{#each paintings}}
-    <a href="/painting/:{{id}}">
+    <a href="/painting/{{id}}">
         <article class="card">
             <img class="paint" src="{{img}}" alt="{{paintingname }}">
             <div class="contain">
@@ -20,3 +24,4 @@
 </div>
 <a href="/painting-form"><button class="addPainting"><img class="add" src="assets/add.png" alt="add">Add Painting
     </button></a>
+<script src="/dom.js"></script>
