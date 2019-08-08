@@ -1,27 +1,27 @@
+<link rel="stylesheet" href="/stylePaintId.css">
 <header>
   {{#each painting}}
   <h1>{{paintingname}}</h1>
   {{/each}}
 </header>
 
-  {{#each painting}}
-  <img src ="{{img}}">
-  <ul>
-    <li> {{price}} </li>
-    <li> {{name}} </li>
-    <li> {{country}} </li>
-    <li> {{description}} </li>
-  </ul>
-  {{/each}}
-  {{#each allPaintings}}
-    <a href="/painting/{{id}}">
-        <article class="card">
-            <img src="{{img}}" alt="{{paintingname}}">
-            <div class="content">
-                <h2> {{paintingname}}</h2>
-                <h2>{{price}}</h2>
-            </div>
-        </article>
-    </a>
-    {{/each}}
-
+{{#each painting}}
+<img src="{{img}}">
+<ul>
+  <li> {{price}} </li>
+  <li> {{name}} </li>
+  <li> {{country}} </li>
+  <li> {{description}} </li>
+</ul>
+{{/each}}
+{{#each allPaintings}}
+<a href="/painting/{{id}}">
+  <article class="card">
+    <img class="paint" src="{{img}}" alt="{{paintingname }}">
+    <div class="contain">
+      <p><b> {{paintingname }}</b></p>
+      <p>{{price}}</p>
+    </div>
+  </article>
+</a>
+{{/each}}
