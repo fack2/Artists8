@@ -21,7 +21,7 @@
 		"start": "node src/server.js",
 		"dev": "nodemon src/server.js",
 		"eslint":"eslint .",
-		"eslintfix":"eslint . --fix"
+		"eslint:fix":"eslint . --fix"
 	},
 	"repository": {
 		"type": "git",

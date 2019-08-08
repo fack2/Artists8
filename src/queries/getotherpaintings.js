@@ -7,7 +7,7 @@ const getOtherPaintings = id => {
       [id]
     )
     .then(res => res.rows)
-    .catch(err => err))
+  )
 }
 
 module.exports = getOtherPaintings
