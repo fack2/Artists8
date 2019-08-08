@@ -6,8 +6,6 @@ const home = require('./home')
 const painting = require('./painting')
 const search = require('./search')
 const paintingForm = require('./paintingForm')
-
-router.get('/painting/:id', painting.get)
 router.get('/search/:search', search.get)
 router.get('/', home.get)
 router.get('/painting/:id', painting.promiseAll)

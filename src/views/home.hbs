@@ -1,5 +1,6 @@
+<link rel="stylesheet" href="/style.css">
 {{>header}}
-<input type="search" id="searchInput" placeholder="Enter the painting name ...">
+<input type="search" class="inputH" id="searchInput" placeholder="Enter the painting name ...">
 <a id="aImg">
     <img class="searchImg" id="searchImg" src="/assets/search.png">
 </a>
@@ -12,14 +13,15 @@
     {{#each paintings}}
     <a href="/painting/{{id}}">
         <article class="card">
-            <img src="{{img}}" alt="{{paintingname }}">
-            <div class="content">
-                <h2> {{paintingname }}</h2>
-                <h2>{{price}}</h2>
+            <img class="paint" src="{{img}}" alt="{{paintingname }}">
+            <div class="contain">
+                <p><b> {{paintingname }}</b></p>
+                <p>{{price}}</p>
             </div>
         </article>
     </a>
     {{/each}}
 </div>
-<a href="/painting-form"><button>Add Painting</button></a>
+<a href="/painting-form"><button class="addPainting"><img class="add" src="assets/add.png" alt="add">Add Painting
+    </button></a>
 <script src="/dom.js"></script>

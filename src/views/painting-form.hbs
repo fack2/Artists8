@@ -1,25 +1,24 @@
+<link rel="stylesheet" href="/styleForm.css">
 {{>header}}
-<form action="/painting-form" method="POST">
+<div class="container">
+    <form class="contact" action="/painting-form" method="POST">
 
-    <label for="artistID">Artist</label>
-    <select name=artistID id="artistID">
-        {{#each artists}}
-        <option value="{{id}}">{{name}}</option>
-        {{/each}}
-    </select>
-    <br>
-    <label for="paintName">Painting</label>
-    <input type="text" name="paintName" id="paintName">
-    <br>
-    <label for="price">Price</label>
-    <input type="text" name="price" id="price">
-    <br>
-    <label for="img">Img</label>
-    <input type="text" name="img" id="img">
-    <br>
-    <label for="description">Description</label>
-    <textarea rows="4" cols="50" name="description" id="description"></textarea>
-    <br>
-    <input type="submit" value="Add">
+        <label class="labelForm" for="artistID">Artist
+            <select name=artistID id="artistID" class="artistID">
+                {{#each artists}}
+                <option value="{{id}}">{{name}}</option>
+                {{/each}}
+            </select></label><br>
+        <label class="labelForm" for="paintName">Painting
+            <input class="inputForm" type="text" name="paintName" id="paintName"></label>
+        <label class="labelForm" for="price">Price
+            <input class="inputForm" type="text" name="price" id="price"></label>
+        <label class="labelForm" for="img">Img
+            <input class="inputForm" type="text" name="img" id="img"></label>
+        <label class="labelForm" for="description">Description
+            <textarea rows="4" cols="50" name="description" id="description" class="description"></textarea></label>
 
-</form>
+        <button class="add" name="submit" type="submit">Add</button>
+
+    </form>
+</div>
