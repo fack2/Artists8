@@ -22,9 +22,4 @@
     {{/each}}
 </div>
 <a href="/painting-form"><button>Add Painting</button></a>
-<script>
-    document.getElementById("searchImg").addEventListener("click", e => {
-        const search = document.getElementById("searchInput").value;
-        document.getElementById("aImg").href = `/search/${search}`
-    })
-</script>
+<script src="/dom.js"></script>
